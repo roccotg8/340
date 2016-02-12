@@ -13,8 +13,12 @@ echo "argument 5 is $5"
 
 for i in $@
 do
-    if [ $i == "-h" ] ;then 
-        echo "this should be useful... sorry"
-    fi
-    echo "command line option: $i"
+  #  if [ $i == "-h" ] ;then 
+ #       echo "this should be useful... sorry"
+#    fi
+    case $i in
+-h) echo "-h help command right?" ;;
+-r) echo "get rekt" ;;
+esac
+
 done
